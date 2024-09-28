@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/add.css">
+</head>
+<body>
+    
+<div class="nav">
+    <h1 class="dit">EDIT_<span class="edt">_PAGE</span></h1>
+</div>
+        <div class="container">
+            <form id="frm">
+                <label for="id">Empid</label>
+                <input type="text" id="id" name="id" placeholder="EMP00">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <label for="salary">Salary</label>
+            <input type="text" id="sal" name="sal">
+            <label for="experience">Experience</label>
+            <input type="text" id="exp" name="exp">
+            <label for="designation">Designation</label>
+            <input type="text" id="des" name="des">
+            <div class="profile">
+               <input type="file" id="profile" class="profile" onchange="getProfile()" >
+               <img src="../images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" alt="" id="emp-img" class="emp-img"> 
+            </div>
+            <span class="sub">
+                <button id="sub">submit</button>
+            </span>
+        </form>
+    </div>  
+<script src="../js/edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/add.css">
+</head>
+<body>
+    <!-- nav -->
+     <div class="nav1">
+        <div class="left">
+            <h1>ADD_<span class="hea">_EMPLOYEE</span></h1>
+        </div>
+     </div>
+    <!-- nav end -->
+     <!-- body -->
+      <div class="container">
+        <form id="frm">
+            <label for="id">empid</label>
+            <input type="text" id="id" name="id" placeholder="EMP0" onkeyup="validateId(document.getElementById('id').value)">
+            <div id="idV"></div>
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" onkeyup="validateName(document.getElementById('name').value)">
+            <div id="nameV"></div>
+            <label for="phone">phone</label>
+            <input type="text" id="phone" name="phone" onkeyup="validatePhone(document.getElementById('phone').value)">
+            <div id="phn"></div>
+            <label for="email">email</label>
+            <input type="text" id="email" name="email">
+            <!-- <div id="emailV"></div> -->
+            <label for="salary">salary</label>
+            <input type="text" id="sal" name="sal">
+            <!-- <div id="salaryV"></div> -->
+            <label for="experience">experience</label>
+            <input type="text" id="exp">
+            <!-- <div id="expV"></div> -->
+            <label for="designation">designation</label>
+            <input type="text" id="des" name="des">
+            <!-- <div id="desV"></div> -->
+<div class="prof">
+
+    <label for="profile">profile</label>
+    
+    <input type="file" id="profile" class="profile" onchange="getProfile()" style="border: none;">
+    <img src="../images/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg" id="emp-img" class="emp-img" alt="">
+</div>
+            <span class="sub">
+                <button id="sub" type="submit">submit</button>
+            </span>
+            
+        </form>
+      </div>
+     <!-- bodyend -->
+      <script src="../js/add.js"></script>
+</body>
+</html>
