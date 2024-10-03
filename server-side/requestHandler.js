@@ -1,4 +1,6 @@
 import empSchema from "./model/employee.model.js"
+import userSchema from "./model/user.model.js"
+import bcrypt from "bcrypt"
 
 
 export async function addEmp(req,res){
@@ -79,4 +81,57 @@ const data=await empSchema.deleteOne({_id}).then(()=>{
 }).catch((error)=>{
    res.status(404).send(error)
 })
+}
+
+//register
+
+//using the technique of promise
+
+export async function signUp(req,res){
+   const{username,email,password,cpassword}=req.body
+  if(!(username&&email&&password&&cpassword))
+   return res.status(404).send({msg:"feilds are empty"})
+const user=await userSchema.findOne({email});
+if(user)
+   return res.status(404).send({msg:"user already exist"});
+if(password!==cpassword)
+return res.status(404).send("password does'nt match")
+bcrypt.hash(password,10).then(async(hashedPassword)=>{
+   console.log(hashedPassword);
+   
+   await userSchema.create({username,email,password:hashedPassword}).then(()=>{
+      res.status(201).send({msg:"login sucessfully"})
+   }).catch((error)=>{
+      res.status(404).send({msg:"not registered"})
+   })
+}).catch((error)=>{
+   res.status(404).send({msg:error})
+
+})
+}
+
+
+//by using second tecnique of bcrypt
+
+// export async function signUp(req,res){
+//    const {username,email,password,cpassword}=req.body
+//    bcrypt.hash(password,15,async(err, hashedPassword)=>{
+//       console.log(hashedPassword);
+      
+      
+//   });
+// }
+
+
+//user login
+export async function signIn(req,res){
+   try{
+      const {email,password}=req.body
+      if(!(email&&password))
+         return res.status(404).send({msg:"firlds are empty"})
+
+   }catch(error){
+      console.log(error);
+      
+   }
 }

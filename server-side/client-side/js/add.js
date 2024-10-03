@@ -43,9 +43,9 @@ function validatePhone(phone){
 
 
 function validateMail(email){
-    let regEx=/^[A-Z,a-z][a-z,0-9,.]+@[a-z]+([\.][a-z]{3})/
+    let regEx=/^[^\s@]+@[^\s@].[^\s@]+$/
     if((regEx.test(email))){
-        document.getElementById("nameV").textContent=""
+        document.getElementById("emailV").textContent=""
     }
     else{
         document.getElementById("emailV").textContent="invalid"

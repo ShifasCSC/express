@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup">
+            <table id="table">
+                <tr><td><label for="name">username :<input type="text" id="name" onkeyup="getName(document.getElementById('name')).value" ></label><div id="nameV"></div></td></tr>
+                <tr><td><label for="email">email :<input type="email" id="email" onkeyup="getEmail(document.getElementById('email')).value"></label> <div id="emailV"></div></td></tr>
+                <tr><td><label for="password">password :<input type="text" id="pwd"></label></td></tr>
+                <tr><td><label for="cpassword">confirm password :<input type="text" id="cpwd"></label></td></tr>
+                <tr><td><button id="btn">submit</button></td></tr>
+            </table>
+        </div>
+    </div>
+ <script src="../js/user.js"></script>   
+</body>
+</html>
