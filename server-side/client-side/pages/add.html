@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details Form</title>
+    <link rel="stylesheet" href="../css/add.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="container">
+            <h2>Enter Movie Details</h2>
+            <form id="frm" method="POST" enctype="multipart/form-data">
+                <label for="title">Movie Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="rating">Rating</label>
+                <input type="number"  id="rating" required>
+                <label for="screen">Screen</label>
+                <select id="screen">
+                    <option value="">Select Screen Type</option>
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                    <option value="IMAX">IMAX</option>
+                    <option value="4DX">4DX</option>
+                    </select>
+
+                <label for="duration">Duration:</label>
+            <input type="text" placeholder="(in minutes)" id="duration" name="duration" required>
+
+            <label for="genre">Genre:</label>
+            <select name="genre" id="genre">
+                <option value="select">-select-</option>
+                <option value="comedy">comedy</option>
+                <option value="romantic">romantic</option>
+                <option value="action">action</option>
+                <option value="invistigation">invistigation</option>
+            </select>
+
+            <label for="release-date">Release Date:</label>
+            <input type="date" id="releaseDate" name="releaseDate" required>
+            
+            <label for="language">Language:</label>
+            <select name="language" id="language">
+                <option value="select">-select-</option>
+                <option value="English">English</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+            </select>
+            
+            <label for="certification">Certification:</label>
+            <select id="certification" name="certification" required>
+                <option value="U">U</option>
+                <option value="UA">UA</option>
+                <option value="A">A</option>
+                <option value="S">S</option>
+            </select>
+            <div class="div1">
+                
+                <div class="div">
+                    <label for="picture">Picture:</label>
+                    <input type="file" id="picture" name="picture" onchange="getPoster()">
+                    <img src="../img/frofile.jpg" id="bms-poster" alt="">
+                </div>
+                <div class="divs">
+                    <label for="banner">Banner:</label>
+                    <input type="file" id="banner" name="banner" onchange="getBanner()">
+                    <img src="../img/1721989228056_freeaccesswsweb.avif" id="bms-banner" alt="">
+                </div>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    <script src="../js/add.js"></script>
+</body>
+</html>
