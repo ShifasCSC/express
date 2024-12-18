@@ -10,12 +10,13 @@ import nodemailer from "nodemailer"
 
 
 const transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
-    secure: false, // true for port 465, false for other ports
+    // host: "sandbox.smtp.mailtrap.io",
+    // port: 2525,
+    // secure: false, // true for port 465, false for other ports
+    service:"gmail",
     auth: {
-      user: "aea83a68a8ccdf",
-      pass: "745739627f7a80",
+      user: "sshifas333@gmail.com",
+      pass: "asaz wtuc olgh kpgh",
     },
   });
 
@@ -252,7 +253,7 @@ export async function generateOTP(req,res) {
      //update otp in the db 
      userSchema.updateOne({email},{$set:{otp}}).then(async()=>{
          const info = await transporter.sendMail({
-             from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
+             from: 'sshifas333@gmail.com', // sender address
              to: `${email}`, // list of receivers
              subject: "OTP", // Subject line
              text: "VERIFICATION", // plain text body
