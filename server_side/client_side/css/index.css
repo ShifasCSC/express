@@ -130,3 +130,20 @@ tbody > tr:nth-of-type(even) {
 }
 /* table end */
 
+
+
+/* mediaquery */
+
+@media screen and (max-width:577.9px){
+  .nav{
+    padding: 5px 10px;
+    background-color:orangered;
+    color: rgb(9, 1, 1);
+    width: 100%;
+}
+
+.right{
+  display: none;
+}
+
+}
